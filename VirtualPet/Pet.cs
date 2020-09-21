@@ -9,6 +9,7 @@ namespace VirtualPet
     {       //  properties 
         public string Name { get; set; }
         public string Species { get; set; }
+        public string Hunger { get; set; }
 
         // methods
         public void SetName(string name)
@@ -28,7 +29,11 @@ namespace VirtualPet
         {
             return Species; 
         }
-
+        //public int GetHunger()
+        //{
+        //    int Hunger = 50;
+        //}
+        // Finished here
     }
 
     //public string SetName(string newName)
