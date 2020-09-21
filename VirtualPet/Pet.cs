@@ -9,19 +9,24 @@ namespace VirtualPet
     {       //  properties 
         public string Name { get; set;}
         public string Species { get; set; }
+
         // methods
-        public void SetName(string name)
+        public void SetName(string testPetName)
         {
-            name = "Fluffy";
-            Name = name;
+            Name = testPetName;
+            
         }
 
         public string GetName() 
         {
             return "Fido"; ///return variable instead of quotes
         }
-      
-
+        public void SetSpecies(string species)
+        {
+           
+            species = "Cat";
+            Species = species;
+        }
     }
 
     //public string SetName(string newName)
