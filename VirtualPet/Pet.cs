@@ -8,6 +8,7 @@ namespace VirtualPet
     public class Pet
     {       //  properties 
         public string Name { get; set;}
+        public string Species { get; set; }
         // methods
         public void SetName(string name)
         {

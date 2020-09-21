@@ -51,7 +51,8 @@ namespace VirtualPet.Tests
         [Fact]
         public void Pet_Should_Have_Species()
         {
-            // Assert.NotNull(testPet.Species);
+            testPet.Species = "Species";
+            Assert.NotNull(testPet.Species);
         }
 
         [Fact]
