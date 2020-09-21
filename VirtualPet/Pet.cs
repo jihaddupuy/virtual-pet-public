@@ -6,8 +6,17 @@ using System.Text;
 namespace VirtualPet
 {
     public class Pet
-    {
+    {       //  properties 
         public string Name { get; set;}
+        // methods
+        public void SetName(string name)
+        {
+            name = "Fluffy";
+            Name = name;
+        }
+
+        
+      
 
     }
 
