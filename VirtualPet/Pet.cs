@@ -15,7 +15,10 @@ namespace VirtualPet
             Name = name;
         }
 
-        
+        public string GetName() 
+        {
+            return "Fido"; ///return variable instead of quotes
+        }
       
 
     }
