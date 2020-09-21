@@ -7,26 +7,28 @@ namespace VirtualPet
 {
     public class Pet
     {       //  properties 
-        public string Name { get; set;}
+        public string Name { get; set; }
         public string Species { get; set; }
 
         // methods
-        public void SetName(string testPetName)
+        public void SetName(string name)
         {
-            Name = testPetName;
-            
+            Name = name;
         }
 
-        public string GetName() 
+        public string GetName()
         {
-            return "Fido"; ///return variable instead of quotes
+            return Name; ///return variable instead of quotes
         }
         public void SetSpecies(string species)
         {
-           
-            species = "Cat";
             Species = species;
         }
+        public string GetSpecies()
+        {
+            return Species; 
+        }
+
     }
 
     //public string SetName(string newName)
