@@ -126,9 +126,9 @@ namespace VirtualPet.Tests
         [Fact]
         public void SeeDoctor_Should_Increase_Health_By_30()
         {
-            // testPet.SeeDoctor();
+            testPet.SeeDoctor();
 
-            // Assert.Equal(60, testPet.GetHealth());
+            Assert.Equal(60, testPet.GetHealth());
         }
 
         [Fact]
