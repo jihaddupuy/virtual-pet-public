@@ -7,7 +7,7 @@ namespace VirtualPet
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             //what is the species of your pet?
@@ -30,6 +30,18 @@ namespace VirtualPet
             string name = Console.ReadLine();
             pet.SetName(name);
             //Console.WriteLine(pet.GetName());
+
+            Console.WriteLine("What species is your pet?");
+            string species = Console.ReadLine();
+            pet.SetSpecies(species);
+
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("1. Feed your Pet");
+            Console.WriteLine("2. Play with your Pet");
+            Console.WriteLine("3. Take your Pet to the doctor");
+            Console.WriteLine("4. Check your Pet's status");
+            Console.WriteLine("5. Quit");
+
 
 
 
