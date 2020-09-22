@@ -46,7 +46,7 @@ namespace VirtualPet
                 Console.WriteLine("4. Check your Pet's status");
                 Console.WriteLine("5. Quit");
 
-
+                ///determine where to add Ticks
                 string menuChoice = Console.ReadLine();
                 switch (menuChoice)
                 {
@@ -56,12 +56,11 @@ namespace VirtualPet
                     case "2":
                         pet.Play();
                         break;
-                    case "3":
+                    case "3": ///ad cw to show indication of what seeing the doctor does for your pet
                         pet.SeeDoctor();
                         break;
-                    case "4":
-                        // Add names to statuses.
-                        Console.WriteLine($"{pet.GetHunger()}, {pet.GetBoredom()}, {pet.GetHealth()}.");
+                    case "4": ///add pet name string name and add cw for every status
+                        Console.WriteLine($"Hunger:{pet.GetHunger()}, Boredom {pet.GetBoredom()}, Pet Health {pet.GetHealth()}.");
                         break;
                     case "5":
                         petChoice = false;
@@ -70,6 +69,8 @@ namespace VirtualPet
                         Console.WriteLine("Invalid entry.");
                         break;
                 }
+                Console.ReadKey();
+                Console.Clear();
             }
 
 
