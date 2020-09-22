@@ -35,14 +35,42 @@ namespace VirtualPet
             string species = Console.ReadLine();
             pet.SetSpecies(species);
 
-            Console.WriteLine("What would you like to do?");
-            Console.WriteLine("1. Feed your Pet");
-            Console.WriteLine("2. Play with your Pet");
-            Console.WriteLine("3. Take your Pet to the doctor");
-            Console.WriteLine("4. Check your Pet's status");
-            Console.WriteLine("5. Quit");
+            bool petChoice = true;
+            while (petChoice)
+            {
+                // Add console clear
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("1. Feed your Pet");
+                Console.WriteLine("2. Play with your Pet");
+                Console.WriteLine("3. Take your Pet to the doctor");
+                Console.WriteLine("4. Check your Pet's status");
+                Console.WriteLine("5. Quit");
 
 
+                string menuChoice = Console.ReadLine();
+                switch (menuChoice)
+                {
+                    case "1":
+                        pet.Feed();
+                        break;
+                    case "2":
+                        pet.Play();
+                        break;
+                    case "3":
+                        pet.SeeDoctor();
+                        break;
+                    case "4":
+                        // Add names to statuses.
+                        Console.WriteLine($"{pet.GetHunger()}, {pet.GetBoredom()}, {pet.GetHealth()}.");
+                        break;
+                    case "5":
+                        petChoice = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid entry.");
+                        break;
+                }
+            }
 
 
 
