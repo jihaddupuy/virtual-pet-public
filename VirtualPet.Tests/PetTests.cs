@@ -142,9 +142,9 @@ namespace VirtualPet.Tests
         [Fact]
         public void Play_Should_Decrease_Boredom_By_20()
         {
-            // testPet.Play();
+             testPet.Play();
 
-            // Assert.Equal(40, testPet.GetBoredom());
+             Assert.Equal(40, testPet.GetBoredom());
         }
 
         [Fact]
