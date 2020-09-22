@@ -21,12 +21,12 @@ namespace VirtualPet.Tests
         // INSTRUCTIONS:
         // Uncomment code in the test body one test at a time
         // Add source code to eliminate the build errors (red squiggle) and pass the test
-        
+
         [Fact]
         public void Pet_Should_Have_Name()
         {
             testPet.Name = "Pet Name";
-            
+
             Assert.NotNull(testPet.Name);
         }
 
@@ -66,11 +66,11 @@ namespace VirtualPet.Tests
         [Fact]
         public void GetSpecies_Should_Get_Pet_Species_Value()
         {
-           testPet.SetSpecies("Dog");
+            testPet.SetSpecies("Dog");
 
-           string testPetSpecies = testPet.GetSpecies();
+            string testPetSpecies = testPet.GetSpecies();
 
-           Assert.Equal("Dog", testPetSpecies);
+            Assert.Equal("Dog", testPetSpecies);
         }
 
         [Fact]
@@ -90,15 +90,15 @@ namespace VirtualPet.Tests
         [Fact]
         public void Pet_Should_Have_Boredom()
         {
-            // Assert.NotNull(testPet.Boredom);
+            Assert.NotNull(testPet.Boredom);
         }
 
         [Fact]
         public void GetBoredom_Should_Return_Initial_Boredom_Level_Of_60()
         {
-            // int testPetBoredom = testPet.GetBoredom();
+            int testPetBoredom = testPet.GetBoredom();
 
-            // Assert.Equal(60, testPetBoredom);
+            Assert.Equal(60, testPetBoredom);
         }
 
         [Fact]
@@ -111,7 +111,7 @@ namespace VirtualPet.Tests
         public void GetHealth_Should_Return_Initial_Health_Level_Of_30()
         {
             // int testPetHealth = testPet.GetHealth();
-            
+
             // Assert.Equal(30, testPetHealth);
         }
 
