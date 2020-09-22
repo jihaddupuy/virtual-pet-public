@@ -11,11 +11,13 @@ namespace VirtualPet
         public string Species { get; set; }
         public int Hunger { get; set; }
         public int Boredom { get; set; }
+        public int Health { get; set; }
         // constuctor
         public Pet()
         {
             Hunger = 50;
             Boredom = 60;
+            Health = 30;
         }
 
         
@@ -48,6 +50,11 @@ namespace VirtualPet
         public int GetBoredom()
         {
             return Boredom;
+        }
+
+        public int GetHealth()
+        {
+            return Health;
         }
 
     }
