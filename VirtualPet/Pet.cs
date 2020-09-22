@@ -4,12 +4,17 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace VirtualPet
-{
+{               
     public class Pet
     {       //  properties 
         public string Name { get; set; }
         public string Species { get; set; }
-        public string Hunger { get; set; }
+        public int Hunger { get; set; }
+        // constuctor
+        public Pet()
+        {
+            Hunger = 50;
+        }
 
         // methods
         public void SetName(string name)
@@ -29,16 +34,12 @@ namespace VirtualPet
         {
             return Species; 
         }
-        //public int GetHunger()
-        //{
-        //    int Hunger = 50;
-        //}
-        // Finished here
-    }
 
-    //public string SetName(string newName)
-    //{
-    //    string newName = "Fluffy";
-    //    return newName;
-    //}
+
+       public int GetHunger()
+        {
+            return Hunger;
+        }
+        
+    }
 }
