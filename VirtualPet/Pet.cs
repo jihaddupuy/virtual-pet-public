@@ -65,5 +65,10 @@ namespace VirtualPet
         {
             Health += 30;
         }
+
+        public void Play()
+        {
+            Hunger += 10;
+        }
     }
 }
