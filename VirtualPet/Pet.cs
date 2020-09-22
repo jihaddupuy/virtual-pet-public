@@ -56,6 +56,10 @@ namespace VirtualPet
         {
             return Health;
         }
+        public void Feed()
+        {
+            Hunger -= 40;
+        }
 
     }
 }

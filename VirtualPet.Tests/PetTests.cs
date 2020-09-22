@@ -118,9 +118,9 @@ namespace VirtualPet.Tests
         [Fact]
         public void Feed_Should_Decrease_Hunger_By_40()
         {
-            // testPet.Feed();
+             testPet.Feed();
 
-            // Assert.Equal(10, testPet.GetHunger());
+             Assert.Equal(10, testPet.GetHunger());
         }
 
         [Fact]
