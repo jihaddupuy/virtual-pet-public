@@ -38,7 +38,7 @@ namespace VirtualPet
             bool petChoice = true;
             while (petChoice)
             {
-                // Add console clear
+                // Add status display when they enter the loop
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1. Feed your Pet");
                 Console.WriteLine("2. Play with your Pet");
@@ -52,12 +52,15 @@ namespace VirtualPet
                 {
                     case "1":
                         pet.Feed();
+                        Console.WriteLine($"You fed {name}.");
                         break;
                     case "2":
                         pet.Play();
+                        Console.WriteLine($"You and {name} played in the meadow together!");
                         break;
                     case "3": ///ad cw to show indication of what seeing the doctor does for your pet
                         pet.SeeDoctor();
+                        Console.WriteLine($"You took {name} to the vet for health.");
                         break;
                     case "4": ///add pet name string name and add cw for every status
                         Console.WriteLine($"Hunger:{pet.GetHunger()}, Boredom {pet.GetBoredom()}, Pet Health {pet.GetHealth()}.");
@@ -69,6 +72,7 @@ namespace VirtualPet
                         Console.WriteLine("Invalid entry.");
                         break;
                 }
+                Console.WriteLine("Press Enter to continue.");
                 Console.ReadKey();
                 Console.Clear();
             }
