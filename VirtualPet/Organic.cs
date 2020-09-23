@@ -4,7 +4,6 @@ using System.Text;
 
 namespace VirtualPet
 {
-    class Class1
-    {
-    }
+    public class Organic : Pet
+    { }
 }

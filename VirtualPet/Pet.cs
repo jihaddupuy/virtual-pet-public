@@ -23,64 +23,64 @@ namespace VirtualPet
         
 
         // methods
-        public void SetName(string name)
+        public virtual void SetName(string name)
         {
             Name = name;
         }
 
-        public string GetName()
+        public virtual string GetName()
         {
             return Name; ///return variable instead of quotes
         }
-        public void SetSpecies(string species)
+        public virtual void SetSpecies(string species)
         {
             Species = species;
         }
-        public string GetSpecies()
+        public virtual string GetSpecies()
         {
             return Species;
         }
 
 
-        public int GetHunger()
+        public virtual int GetHunger()
         {
             return Hunger;
         }
 
-        public int GetBoredom()
+        public virtual int GetBoredom()
         {
             return Boredom;
         }
         
-        public int GetHealth()
+        public virtual int GetHealth()
         {
             return Health;
         }
-        public void Feed()
+        public virtual void Feed()
         {
             Hunger -= 40;
         }
 
-        public void SeeDoctor()
+        public virtual void SeeDoctor()
         {
             Health += 30;
         }
 
-        public void Play()
+        public virtual void Play()
         {
             Hunger += 10;
             Boredom -= 20;
             Health += 10;
         }
 
-        public void Tick()
+        public virtual void Tick()
         {
             Health -= 5;
             Boredom += 5;
             Hunger += 5;
         }
 
-        public void DisplayStatus()
+        public virtual void DisplayStatus()
         {
             Console.WriteLine($"{Name} the {Species}:");
             Console.WriteLine($"Hunger:{GetHunger()}, Boredom {GetBoredom()}, Pet Health {GetHealth()}.\n");
