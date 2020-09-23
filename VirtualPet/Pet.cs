@@ -51,7 +51,7 @@ namespace VirtualPet
         {
             return Boredom;
         }
-
+        
         public int GetHealth()
         {
             return Health;
@@ -79,6 +79,11 @@ namespace VirtualPet
             Boredom += 5;
             Hunger += 5;
         }
-       
+
+        public void DisplayStatus()
+        {
+            Console.WriteLine($"{Name} the {Species}:");
+            Console.WriteLine($"Hunger:{GetHunger()}, Boredom {GetBoredom()}, Pet Health {GetHealth()}.\n");
+        }
     }
 }
