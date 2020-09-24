@@ -6,7 +6,7 @@ using System.Text;
 namespace VirtualPet
 {
     public class Pet
-    {       //  properties 
+    {   //  properties 
         public string Name { get; set; }
         public string Species { get; set; }
         public int Hunger { get; set; }
@@ -20,8 +20,6 @@ namespace VirtualPet
             Health = 30;
         }
 
-        
-
         // methods
         public virtual void SetName(string name)
         {
@@ -30,7 +28,7 @@ namespace VirtualPet
 
         public virtual string GetName()
         {
-            return Name; ///return variable instead of quotes
+            return Name;
         }
         public virtual void SetSpecies(string species)
         {
@@ -51,7 +49,7 @@ namespace VirtualPet
         {
             return Boredom;
         }
-        
+
         public virtual int GetHealth()
         {
             return Health;
@@ -85,19 +83,5 @@ namespace VirtualPet
             Console.WriteLine($"{Name} the {Species}:");
             Console.WriteLine($"Hunger:{GetHunger()}, Boredom {GetBoredom()}, Pet Health {GetHealth()}.\n");
         }
-        public void AddPet()
-        {
-            Console.WriteLine("What is the name of your pet?\n");
-            string name = Console.ReadLine();
-            SetName(name);
-
-            Console.WriteLine("What species is your pet?\n");
-            string species = Console.ReadLine();
-            SetSpecies(species);
-
-            DisplayStatus();
-        }
-       
-
     }
 }

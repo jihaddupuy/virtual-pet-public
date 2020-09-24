@@ -11,15 +11,13 @@ namespace VirtualPet
 
         static void Main(string[] args)
         {
+            Shelter shelter = new Shelter();
 
             Pet pet = new Pet();
 
             List<Pet> ListOfPets = new List<Pet>();
 
             Console.WriteLine("Hello! Welcome to Virtual Pets\n");
-
-            pet.AddPet();
-            
 
             bool petChoice = true;
             while (petChoice)
@@ -28,8 +26,9 @@ namespace VirtualPet
                 Console.WriteLine("1. Feed your Pet");
                 Console.WriteLine("2. Play with your Pet");
                 Console.WriteLine("3. Take your Pet to the doctor");
-                Console.WriteLine("4. Check your Pet's status");
-                Console.WriteLine("5. Quit");
+                Console.WriteLine("4. Create a new organic pet");
+                Console.WriteLine("5. Create a new robotic pet");
+                Console.WriteLine("6. Quit");
                 
                 string menuChoice = Console.ReadLine();
                 switch (menuChoice)
@@ -44,15 +43,31 @@ namespace VirtualPet
                         Console.WriteLine($"You and {pet.GetName()} played in the meadow together!");
                         pet.Tick();
                         break;
-                    case "3": ///ad cw to show indication of what seeing the doctor does for your pet
+                    case "3":
                         pet.SeeDoctor();
                         Console.WriteLine($"You took {pet.GetName()} to the vet for health.");
                         pet.Tick();
                         break;
                     case "4":
+                        Console.WriteLine("What is the name for your organic pet?");
+                        string name = Console.ReadLine();
+                        Console.WriteLine("What species is your organic pet?");
+                        string species = Console.ReadLine();
+                        pet = new Organic(name, species);
+                        shelter.AddPet(pet);
                         pet.DisplayStatus();
+                        Console.ReadKey();
                         break;
                     case "5":
+                        Console.WriteLine("What is the name of your robotic pet?");
+                        name = Console.ReadLine();
+                        species = "Robot";
+                        pet = new Robotic(name, species);
+                        shelter.AddPet(pet);
+                        pet.DisplayStatus();
+                        Console.ReadKey();
+                        break;
+                    case "6":
                         petChoice = false;
                         break;
                     default:

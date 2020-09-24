@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace VirtualPet
-{
+{           
     public class Robotic : Pet
-    {
+    { //properties
         public int OilLevel { get; set; }
 
         public string Robot { get; set; }
         
-
+        /// constructor
         public Robotic()
         {
             OilLevel = 50;
@@ -19,7 +19,7 @@ namespace VirtualPet
         public Robotic(string name, string species)
         {
             Name = name;
-            Species = species;
+            Robot = species;
             OilLevel = 50;
             Boredom = 60;
             Health = 30;
@@ -39,7 +39,7 @@ namespace VirtualPet
 
         public override void Feed()
         {
-            OilLevel += 40; /// set up if/else statement for sufficient, depleting and critical oil levels with increments doing down
+            OilLevel += 40;
             Console.WriteLine($"Your pet's {OilLevel} is sufficient");
         }
 
@@ -64,7 +64,7 @@ namespace VirtualPet
 
         public override void DisplayStatus()
         {
-            Console.WriteLine($"Robotic {Name}:");
+            Console.WriteLine($"{GetRobot()} {Name}:");
             Console.WriteLine($"Oil Level:{GetOilLevel()}, Boredom {GetBoredom()}, Robot Health {GetHealth()}.\n");
         }
     }
