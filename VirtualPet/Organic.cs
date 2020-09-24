@@ -10,5 +10,14 @@ namespace VirtualPet
         {
 
         }
+
+        public Organic(string name, string species)
+        {
+            Name = name;
+            Species = species;
+            Hunger = 50;
+            Boredom = 60;
+            Health = 30;
+        }
     }
 }

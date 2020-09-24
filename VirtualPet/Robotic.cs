@@ -8,37 +8,35 @@ namespace VirtualPet
     {
         public int OilLevel { get; set; }
 
+        public string Robot { get; set; }
+        
+
         public Robotic()
         {
             OilLevel = 50;
         }
 
-        ///methods
-
-        public override void SetName(string name)
+        public Robotic(string name, string species)
         {
             Name = name;
+            Species = species;
+            OilLevel = 50;
+            Boredom = 60;
+            Health = 30;
         }
 
-        public override string GetName()
+        public string GetRobot()
         {
-            return Name; ///return variable instead of quotes
+            return Robot;
         }
-        
+
+        ///methods
+
         public int GetOilLevel()
         {
             return OilLevel;
         }
 
-        public override int GetBoredom()
-        {
-            return Boredom;
-        }
-
-        public override int GetHealth()
-        {
-            return Health;
-        }
         public override void Feed()
         {
             OilLevel += 40; /// set up if/else statement for sufficient, depleting and critical oil levels with increments doing down

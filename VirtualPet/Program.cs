@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Dynamic;
 using System.Security.Cryptography.X509Certificates;
@@ -12,6 +13,9 @@ namespace VirtualPet
         {
 
             Pet pet = new Pet();
+
+            List<Pet> ListOfPets = new List<Pet>();
+
             Console.WriteLine("Hello! Welcome to Virtual Pets\n");
 
             pet.AddPet();
