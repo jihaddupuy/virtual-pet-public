@@ -85,5 +85,19 @@ namespace VirtualPet
             Console.WriteLine($"{Name} the {Species}:");
             Console.WriteLine($"Hunger:{GetHunger()}, Boredom {GetBoredom()}, Pet Health {GetHealth()}.\n");
         }
+        public void AddPet()
+        {
+            Console.WriteLine("What is the name of your pet?\n");
+            string name = Console.ReadLine();
+            SetName(name);
+
+            Console.WriteLine("What species is your pet?\n");
+            string species = Console.ReadLine();
+            SetSpecies(species);
+
+            DisplayStatus();
+        }
+       
+
     }
 }
