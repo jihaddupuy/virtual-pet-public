@@ -80,7 +80,7 @@ namespace VirtualPet
 
         public virtual void DisplayStatus()
         {
-            Console.WriteLine($"{Name} the {Species}:");
+            Console.WriteLine($"{Name}  {Species}:");
             Console.WriteLine($"Hunger:{GetHunger()}, Boredom {GetBoredom()}, Pet Health {GetHealth()}.\n");
         }
     }

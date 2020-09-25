@@ -13,13 +13,13 @@ namespace VirtualPet
         /// constructor
         public Robotic()
         {
-            OilLevel = 50;
+   
         }
 
         public Robotic(string name, string species)
         {
             Name = name;
-            Robot = species;
+            Species = species;
             OilLevel = 50;
             Boredom = 60;
             Health = 30;
@@ -59,7 +59,7 @@ namespace VirtualPet
 
         public override void DisplayStatus()
         {
-            Console.WriteLine($"{GetRobot()} {Name}:");
+            Console.WriteLine($" {Name} {Species}:");
             Console.WriteLine($"Oil Level:{GetOilLevel()}, Boredom {GetBoredom()}, Robot Health {GetHealth()}.\n");
         }
     }
