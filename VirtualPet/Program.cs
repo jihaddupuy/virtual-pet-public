@@ -44,7 +44,7 @@ namespace VirtualPet
                         pet.Tick();
                         break;
                     case "3":
-                        pet.SeeDoctor();
+                        pet.AttendToPetHealth();
                         Console.WriteLine($"You took {pet.GetName()} to the vet for health.");
                         pet.Tick();
                         break;
@@ -77,6 +77,9 @@ namespace VirtualPet
                 Console.WriteLine("Press Enter to continue.");
                 Console.ReadKey();
                 Console.Clear();
+                ///ConsoleKeyInfo keyInfo = Console.ReadKey();
+                ///while (keyInfo.Key != ConsoleKey.Enter)
+                   ///keyInfo = Console.ReadKey();
             }
 
 

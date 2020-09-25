@@ -43,11 +43,6 @@ namespace VirtualPet
             Console.WriteLine($"Your pet's {OilLevel} is sufficient");
         }
 
-        public void SeeMechanic()
-        {
-            Health += 30;
-        }
-
         public override void Play()
         {
             OilLevel -= 10;

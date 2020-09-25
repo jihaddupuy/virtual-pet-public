@@ -59,7 +59,7 @@ namespace VirtualPet
             Hunger -= 40;
         }
 
-        public virtual void SeeDoctor()
+        public virtual void AttendToPetHealth()
         {
             Health += 30;
         }

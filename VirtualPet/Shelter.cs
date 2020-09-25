@@ -12,17 +12,23 @@ namespace VirtualPet
         public void AddPet(Pet pet)
         {
             ListOfPets.Add(pet);
-            //Console.WriteLine("What is the name of your pet?\n");
-            //string name = Console.ReadLine();
-            //SetName(name);
 
-            //Console.WriteLine("What species is your pet?\n");
-            //string species = Console.ReadLine();
-            //SetSpecies(species);
-
-            //DisplayStatus();
         }
 
+        public Pet SelectPet()
+        {
+            int index = 1;
+
+            Console.WriteLine("Please select your pet from the shelter:");
+            foreach (Pet pet in ListOfPets)
+            {
+                Console.WriteLine($"{index}. {pet.Name} {pet.Species}");
+                index++;
+            }
+
+            int indexSelected = Convert.ToInt32(Console.ReadLine());
+            return ListOfPets[indexSelected - 1];
+        }
 
 
     }
