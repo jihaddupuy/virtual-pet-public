@@ -11,10 +11,7 @@ namespace VirtualPet
         public string Robot { get; set; }
         
         /// constructor
-        public Robotic()
-        {
-   
-        }
+       
 
         public Robotic(string name, string species)
         {
